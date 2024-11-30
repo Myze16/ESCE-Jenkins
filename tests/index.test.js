@@ -5,5 +5,5 @@ test("soma 2 + 3 deve ser 5", () => {
 });
 
 test("soma 2 + 6 dever ser 8 ", () => {
-    expect(soma(2, 7)).toBe(8);
+    expect(soma(2, 6)).toBe(8);
 });
