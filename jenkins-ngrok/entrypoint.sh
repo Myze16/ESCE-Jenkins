@@ -1,3 +1,5 @@
+#!/bin/bash
+
 java -jar /usr/share/jenkins/jenkins.war &
 
 echo "Aguardando o Jenkins iniciar na porta 8080..."

@@ -1,14 +1,13 @@
-version: "3.8"
-
 services:
   jenkins:
     build: .
     container_name: jenkins-ngrok
     ports:
-      - "8080:8080" # Porta do Jenkins local
-      - "4040:4040" # Porta para acessar o dashboard do Ngrok
+      - "8080:8080"
+      - "4040:4040"
     volumes:
-      - jenkins_home:/var/jenkins_home # Persistência do Jenkins
+      - jenkins_home:/var/jenkins_home
+    image: jenkins:ngrok
 
 volumes:
   jenkins_home:
