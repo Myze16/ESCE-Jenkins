@@ -1,8 +1,8 @@
 pipeline {
     agent any
 
-    environment {
-        NODE_VERSION = 'NodeJS 22.2.0'
+    tools {
+        nodejs 'NodeJS 22.2.0'
     }
 
     stages {
@@ -13,9 +13,6 @@ pipeline {
         }
         stage('Instalar Dependências') {
             steps {
-                script {
-                    tool name: env.NODE_VERSION, type: 'NodeJS'
-                }
                 sh 'npm install'
             }
         }
